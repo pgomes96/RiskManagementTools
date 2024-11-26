@@ -1,0 +1,80 @@
+{
+	"Caption": "$(L,Risks_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/risksmobile/Services/RiskManagementService.service",
+		"EntitySet": "Risks",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/risksmobile/Rules/RiskManagementService/Risks/NavToRisks_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/risksmobile/Rules/RiskManagementService/Risks/Risks_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{title}",
+						"Subhead": "{prio}",
+						"BodyText": "",
+						"Footnote": "{impact}",
+						"Description": "{descr}",
+						"StatusText": "{critically}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "title",
+							"Value": "{title}"
+						},
+						{
+							"KeyName": "prio",
+							"Value": "{prio}"
+						},
+						{
+							"KeyName": "descr",
+							"Value": "{descr}"
+						},
+						{
+							"KeyName": "impact",
+							"Value": "{impact}"
+						},
+						{
+							"KeyName": "critically",
+							"Value": "{critically}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Risks_Detail",
+	"PrefersLargeCaption": true
+}

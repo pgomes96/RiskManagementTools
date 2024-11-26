@@ -1,0 +1,50 @@
+{
+	"Credential": "cf",
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-002.hana.ondemand.com",
+		"Organization": "b8a51fd6-06a4-48c1-aba8-4bb54e2eda76",
+		"Space": "1b8bfc13-7c7c-4b86-a7e1-b4ca630fcf0e"
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/b8a51fd6-06a4-48c1-aba8-4bb54e2eda76/space/1b8bfc13-7c7c-4b86-a7e1-b4ca630fcf0e",
+		"AppId": "lcap.riskmanagementprod.risksmobile",
+		"Destination": [
+			"RiskManagementService"
+		],
+		"Create": true,
+		"DestinationName": "RiskManagementService",
+		"DestinationUrl": "https://org-trial-cf-dev-riskmanagementprod-srv.cfapps.us10-002.hana.ondemand.com/service/RiskManagementService",
+		"Uaa": "riskmanagementprod-uaa"
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=lcap.riskmanagementprod.risksmobile&ClientId=e127868a-3ff4-430a-86ff-7315fcaf4c44&ServerUrl=https://3addf3e7trial-cf-dev-lcap-riskmanagementprod-risksmobile.cfapps.us10-002.hana.ondemand.com&SapCloudPlatformEndpoint=https://3addf3e7trial-cf-dev-lcap-riskmanagementprod-risksmobile.cfapps.us10-002.hana.ondemand.com&AuthorizationEndpointUrl=https://3addf3e7trial-cf-dev-lcap-riskmanagementprod-risksmobile.cfapps.us10-002.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://3addf3e7trial-cf-dev-lcap-riskmanagementprod-risksmobile.cfapps.us10-002.hana.ondemand.com&TokenUrl=https://3addf3e7trial-cf-dev-lcap-riskmanagementprod-risksmobile.cfapps.us10-002.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "RisksMobile",
+		"Service": [
+			{
+				"mdk": "risksmobile/Services/RiskManagementService.service",
+				"cap": {
+					"name": "RiskManagementService",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/RiskManagementService/",
+					"entryPath": "/service/RiskManagementService",
+					"destination": "riskmanagementprod-app-srv",
+					"value": "0"
+				}
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}

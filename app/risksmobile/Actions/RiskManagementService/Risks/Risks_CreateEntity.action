@@ -1,0 +1,20 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/risksmobile/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/risksmobile/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "title": "#Control:title/#Value",
+        "prio": "#Control:prio/#Value",
+        "descr": "#Control:descr/#Value",
+        "impact": "#Control:impact/#Value",
+        "critically": "#Control:critically/#Value"
+    },
+    "Target": {
+        "EntitySet": "Risks",
+        "Service": "/risksmobile/Services/RiskManagementService.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

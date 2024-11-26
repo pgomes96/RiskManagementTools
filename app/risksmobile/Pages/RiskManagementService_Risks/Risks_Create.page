@@ -1,0 +1,62 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/risksmobile/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/risksmobile/Rules/RiskManagementService/Risks/Risks_CreateEntity.js",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "$(L,Create_Risks_Detail)",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "title",
+							"_Name": "title",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "prio",
+							"_Name": "prio",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "descr",
+							"_Name": "descr",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "impact",
+							"KeyboardType": "Number",
+							"_Name": "impact",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "critically",
+							"KeyboardType": "Number",
+							"_Name": "critically",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Risks_Create",
+	"PrefersLargeCaption": true
+}
